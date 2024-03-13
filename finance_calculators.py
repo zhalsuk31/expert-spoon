@@ -22,9 +22,11 @@ if calculator_choice=="investment":
     if interest == "simple":
         result=round(deposit_size*(1+(interest_rate/100)*number_of_years),1)
         print("You will reieve {} at the end of your investment period".format(result))
+        print("Please remember this is not a financial advise")
     elif interest == "compound":
         result=round(deposit_size*((1+(interest_rate/100))**number_of_years),1)
-        print("You will reieve {} at the end of your investment period".format(result))   
+        print("You will reieve {} at the end of your investment period".format(result))
+        print("Please remember this is not a financial advise")
     else: #if the user enters invalid input 
         print("Start from the start and select either simple or compound interest")
 
@@ -36,5 +38,6 @@ elif calculator_choice == "bond":
     mortgage_length=int(input("Please enter the length of your loan in months : "))
     repayment = round((mortgage_rate*0.01/12)*house_value/(1-(1+(mortgage_rate*0.01/12))**(-mortgage_length)), 1)
     print("Your monthly repayment is {}".format(repayment))
+    print("Please remember this is not a financial advise")
 else: #if the user enters invalid input 
     print("Please start from beginning and enter a valid input")
