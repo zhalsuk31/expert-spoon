@@ -37,7 +37,9 @@ elif calculator_choice == "bond":
     mortgage_rate=float(input("Please enter the interest rate on your mortgage : "))
     mortgage_length=int(input("Please enter the length of your loan in months : "))
     repayment = round((mortgage_rate*0.01/12)*house_value/(1-(1+(mortgage_rate*0.01/12))**(-mortgage_length)), 1)
+    repayment_annual = round(repayment * 12, 1)
     print("Your monthly repayment is {}".format(repayment))
+    print("Your annual repayment is {}".format(repayment_annual))
     print("Please remember this is not a financial advise")
 else: #if the user enters invalid input 
     print("Please start from beginning and enter a valid input")
